@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initActiveNavOnScroll();
   initProjectFilters();
   initProjectModals();
-  initPreviewWarningModal();
   initCvModal();
   initSkillBarAnimation();
   initCopyButtons();
@@ -482,7 +481,7 @@ function initProjectModals() {
       // Action buttons: Live Preview & GitHub
       if (modalActionsWrap) {
         modalActionsWrap.innerHTML = `
-          <a href="${data.previewUrl}" target="_blank" class="btn btn-primary btn-preview-trigger" data-preview="${data.previewUrl}" data-github="${data.githubRepo}" data-title="${data.title}" style="flex: 1; justify-content: center; padding: 0.85rem 1.25rem; font-size: 0.95rem;">
+          <a href="${data.previewUrl}" target="_blank" class="btn btn-primary" style="flex: 1; justify-content: center; padding: 0.85rem 1.25rem; font-size: 0.95rem;">
             <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 1rem;"></i> Preview Tampilan Web
           </a>
           <a href="${data.githubRepo}" target="_blank" class="btn btn-outline btn-github" style="flex: 1; justify-content: center; padding: 0.85rem 1.25rem; font-size: 0.95rem;">
@@ -679,60 +678,4 @@ function showToast(message) {
       toast.remove();
     }, 300);
   }, 3200);
-}
-
-function initPreviewWarningModal() {
-  const warningModal = document.getElementById('preview-warning-modal');
-  const closeBtn = document.getElementById('preview-warning-close');
-  const proceedPreviewBtn = document.getElementById('btn-proceed-preview');
-  const proceedGithubBtn = document.getElementById('btn-proceed-github');
-  const warningProjectTitle = document.getElementById('warning-project-title');
-
-  if (!warningModal) return;
-
-  document.addEventListener('click', (e) => {
-    const trigger = e.target.closest('.btn-preview-trigger');
-    if (trigger) {
-      e.preventDefault();
-      const previewUrl = trigger.getAttribute('data-preview') || trigger.getAttribute('href');
-      const githubUrl = trigger.getAttribute('data-github') || '#';
-      const projectTitle = trigger.getAttribute('data-title') || 'Projek Digital';
-
-      if (warningProjectTitle) warningProjectTitle.textContent = projectTitle;
-      if (proceedPreviewBtn) proceedPreviewBtn.href = previewUrl;
-      if (proceedGithubBtn) proceedGithubBtn.href = githubUrl;
-
-      warningModal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-  });
-
-  const closeWarning = () => {
-    warningModal.classList.remove('active');
-    document.body.style.overflow = '';
-  };
-
-  if (closeBtn) closeBtn.addEventListener('click', closeWarning);
-
-  if (proceedPreviewBtn) {
-    proceedPreviewBtn.addEventListener('click', () => {
-      closeWarning();
-    });
-  }
-
-  if (proceedGithubBtn) {
-    proceedGithubBtn.addEventListener('click', () => {
-      closeWarning();
-    });
-  }
-
-  warningModal.addEventListener('click', (e) => {
-    if (e.target === warningModal) closeWarning();
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && warningModal.classList.contains('active')) {
-      closeWarning();
-    }
-  });
 }
