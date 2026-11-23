@@ -1,5 +1,10 @@
 # Git Ignore for Alvin Chandra Portfolio
 
+# Binaries & Executables
+*.exe
+cloudflared.exe
+start-online-server.bat
+
 # Dependencies
 **/vendor/
 **/node_modules/
