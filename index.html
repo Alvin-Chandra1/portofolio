@@ -412,7 +412,7 @@
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Pratinjau Web Asli
                             </a>
                             <button type="button" class="btn btn-outline btn-sm" data-open-modal="swoosh">
-                                <i class="fa-solid fa-circle-info"></i> Detail &amp; Demo
+                                <i class="fa-solid fa-circle-info"></i> Detail Projek
                             </button>
                             <a href="https://github.com/Alvin-Chandra1/swoosh-new" target="_blank" class="btn btn-outline btn-sm btn-github" title="Buka Repositori Kode di GitHub">
                                 <i class="fa-brands fa-github"></i> GitHub
@@ -492,7 +492,7 @@
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Pratinjau Web Asli
                             </a>
                             <button type="button" class="btn btn-outline btn-sm" data-open-modal="ruangbaca">
-                                <i class="fa-solid fa-circle-info"></i> Detail &amp; Demo
+                                <i class="fa-solid fa-circle-info"></i> Detail Projek
                             </button>
                             <a href="https://github.com/Alvin-Chandra1/ruangbaca" target="_blank" class="btn btn-outline btn-sm btn-github" title="Buka Repositori Kode di GitHub">
                                 <i class="fa-brands fa-github"></i> GitHub
@@ -572,7 +572,7 @@
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Pratinjau Web Asli
                             </a>
                             <button type="button" class="btn btn-outline btn-sm" data-open-modal="pengaduan_sekolah">
-                                <i class="fa-solid fa-circle-info"></i> Detail &amp; Demo
+                                <i class="fa-solid fa-circle-info"></i> Detail Projek
                             </button>
                             <a href="https://github.com/Alvin-Chandra1/pengaduan-sekolah" target="_blank" class="btn btn-outline btn-sm btn-github" title="Buka Repositori Kode di GitHub">
                                 <i class="fa-brands fa-github"></i> GitHub
@@ -652,7 +652,7 @@
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Pratinjau Web Asli
                             </a>
                             <button type="button" class="btn btn-outline btn-sm" data-open-modal="perpustakaan_digital">
-                                <i class="fa-solid fa-circle-info"></i> Detail &amp; Demo
+                                <i class="fa-solid fa-circle-info"></i> Detail Projek
                             </button>
                             <a href="https://github.com/Alvin-Chandra1/perpustakaan-sekolah-digital" target="_blank" class="btn btn-outline btn-sm btn-github" title="Buka Repositori Kode di GitHub">
                                 <i class="fa-brands fa-github"></i> GitHub
@@ -1239,11 +1239,6 @@
             </div>
 
             <div class="modal-body">
-                <div>
-                    <div class="modal-section-title"><i class="fa-solid fa-desktop"></i> Pratinjau Tampilan Antarmuka (UI Preview)</div>
-                    <div id="modal-ui-preview"></div>
-                </div>
-
                 <div>
                     <div class="modal-section-title"><i class="fa-solid fa-circle-info"></i> Ringkasan Projek &amp; Peran</div>
                     <p id="modal-summary" style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7;"></p>

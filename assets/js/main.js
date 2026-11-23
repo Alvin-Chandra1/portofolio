@@ -446,28 +446,6 @@ function initProjectModals() {
       modalCategory.textContent = data.category;
       modalSummary.textContent = data.summary;
 
-      // Render authentic live UI Preview iframe
-      if (modalUiPreview) {
-        modalUiPreview.innerHTML = `
-          <div class="preview-window">
-            <div class="preview-window-bar">
-              <div class="preview-window-dots">
-                <span class="dot dot-red"></span>
-                <span class="dot dot-yellow"></span>
-                <span class="dot dot-green"></span>
-              </div>
-              <span class="preview-window-url">${data.previewUrl || 'previews/index.html'}</span>
-              <a href="${data.previewUrl}" target="_blank" class="badge badge-emerald" style="text-decoration:none; display:inline-flex; align-items:center; gap:5px; font-size:0.75rem; padding:3px 9px; font-weight:700;">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Layar Penuh
-              </a>
-            </div>
-            <div style="background:#fff; width:100%; height:460px; overflow:hidden; border-radius:0 0 12px 12px;">
-              <iframe src="${data.previewUrl}" title="${data.title}" style="width:100%; height:100%; border:none; display:block;"></iframe>
-            </div>
-          </div>
-        `;
-      }
-
       // Arch list
       modalArchList.innerHTML = data.architecture.map(item => `
         <li style="display: flex; gap: 0.6rem; align-items: flex-start;">
