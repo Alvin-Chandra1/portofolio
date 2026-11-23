@@ -408,7 +408,7 @@
                         </div>
 
                         <div class="project-actions">
-                            <a href="previews/swoosh/index.html" target="_blank" class="btn btn-primary btn-sm" title="Preview Tampilan Web Swoosh">
+                            <a href="previews/swoosh/index.html" target="_blank" class="btn btn-primary btn-sm btn-preview-trigger" data-preview="previews/swoosh/index.html" data-github="https://github.com/Alvin-Chandra1/swoosh-new" data-title="Swoosh — Reservasi Lapangan Basket" title="Preview Tampilan Web Swoosh">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview Tampilan Web
                             </a>
                             <button type="button" class="btn btn-outline btn-sm" data-open-modal="swoosh">
@@ -488,7 +488,7 @@
                         </div>
 
                         <div class="project-actions">
-                            <a href="previews/ruangbaca/index.html" target="_blank" class="btn btn-primary btn-sm" title="Preview Tampilan Web RuangBaca">
+                            <a href="previews/ruangbaca/index.html" target="_blank" class="btn btn-primary btn-sm btn-preview-trigger" data-preview="previews/ruangbaca/index.html" data-github="https://github.com/Alvin-Chandra1/ruangbaca" data-title="RuangBaca — Platform Publikasi Konten &amp; Jurnal" title="Preview Tampilan Web RuangBaca">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview Tampilan Web
                             </a>
                             <button type="button" class="btn btn-outline btn-sm" data-open-modal="ruangbaca">
@@ -568,7 +568,7 @@
                         </div>
 
                         <div class="project-actions">
-                            <a href="previews/suara-sekolah/index.html" target="_blank" class="btn btn-primary btn-sm" title="Preview Tampilan Web SuaraSekolah">
+                            <a href="previews/suara-sekolah/index.html" target="_blank" class="btn btn-primary btn-sm btn-preview-trigger" data-preview="previews/suara-sekolah/index.html" data-github="https://github.com/Alvin-Chandra1/pengaduan-sekolah" data-title="SuaraSekolah — Aplikasi Pengaduan &amp; Aspirasi Siswa" title="Preview Tampilan Web SuaraSekolah">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview Tampilan Web
                             </a>
                             <button type="button" class="btn btn-outline btn-sm" data-open-modal="pengaduan_sekolah">
@@ -648,7 +648,7 @@
                         </div>
 
                         <div class="project-actions">
-                            <a href="previews/perpustakaan/index.html" target="_blank" class="btn btn-primary btn-sm" title="Preview Tampilan Web Perpustakaan Digital">
+                            <a href="previews/perpustakaan/index.html" target="_blank" class="btn btn-primary btn-sm btn-preview-trigger" data-preview="previews/perpustakaan/index.html" data-github="https://github.com/Alvin-Chandra1/perpustakaan-sekolah-digital" data-title="Perpustakaan Digital SMK Cinta Kasih Tzu Chi" title="Preview Tampilan Web Perpustakaan Digital">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview Tampilan Web
                             </a>
                             <button type="button" class="btn btn-outline btn-sm" data-open-modal="perpustakaan_digital">
@@ -1296,6 +1296,58 @@
                     <span><i class="fa-solid fa-circle-info"></i> Jika PDF tidak tampil di peramban Anda, silakan unduh secara langsung.</span>
                     <a href="assets/CV-Alvin-Chandra.pdf" target="_blank" class="text-gradient" style="font-weight: 700;">
                         Buka di Jendela Baru <i class="fa-solid fa-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         PREVIEW WARNING NOTICE MODAL
+         ========================================================================== -->
+    <div class="modal-overlay" id="preview-warning-modal" aria-hidden="true" role="dialog">
+        <div class="modal-container" style="max-width: 580px;">
+            <div class="modal-header" style="border-bottom: 1px solid rgba(245, 158, 11, 0.25);">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(245, 158, 11, 0.15); color: #f59e0b; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div>
+                        <h3 class="modal-title" style="font-size: 1.15rem; color: #fff;">Pemberitahuan Pratinjau Website</h3>
+                        <div style="font-size: 0.8rem; color: #f59e0b; font-weight: 600;">Hanya Tampilan Antarmuka (UI Preview)</div>
+                    </div>
+                </div>
+                <button class="modal-close-btn" id="preview-warning-close" type="button" aria-label="Tutup">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="modal-body" style="padding: 1.5rem 1.75rem;">
+                <div style="font-weight: 700; color: #fff; margin-bottom: 0.75rem; font-size: 1.05rem;" id="warning-project-title">
+                    Projek Digital
+                </div>
+
+                <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 10px; padding: 1.1rem; margin-bottom: 1.25rem;">
+                    <p style="font-size: 0.925rem; color: var(--text-main); line-height: 1.6; margin: 0;">
+                        <i class="fa-solid fa-circle-exclamation" style="color: #f59e0b; margin-right: 0.4rem;"></i>
+                        Halaman yang akan dibuka merupakan <strong>pratinjau visual antarmuka (UI Preview)</strong> untuk memberikan gambaran tata letak dan desain sistem.
+                    </p>
+                </div>
+
+                <div style="display: flex; gap: 0.85rem; align-items: flex-start; margin-bottom: 1.5rem; font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: 10px; padding: 1.1rem;">
+                    <i class="fa-brands fa-github" style="color: var(--accent-cyan); font-size: 1.5rem; margin-top: 0.1rem; flex-shrink: 0;"></i>
+                    <div>
+                        <strong style="color: #fff; display: block; margin-bottom: 0.25rem;">Akses Fungsi Penuh (Full Functionality):</strong>
+                        Untuk menjalankan sistem secara utuh beserta fungsionalitas backend PHP/Laravel, manajemen database MySQL, dan sesi login pengguna, seluruh kode sumber <strong>harus diunduh / di-clone melalui GitHub</strong>.
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                    <a href="#" id="btn-proceed-preview" target="_blank" class="btn btn-primary" style="justify-content: center; padding: 0.85rem 1.25rem; font-size: 0.95rem; font-weight: 700;">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lanjutkan Buka Preview Tampilan Web
+                    </a>
+                    <a href="#" id="btn-proceed-github" target="_blank" class="btn btn-outline btn-github" style="justify-content: center; padding: 0.85rem 1.25rem; font-size: 0.95rem;">
+                        <i class="fa-brands fa-github"></i> Buka / Unduh Kode Sumber di GitHub
                     </a>
                 </div>
             </div>
