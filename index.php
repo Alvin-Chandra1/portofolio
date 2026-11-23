@@ -171,19 +171,19 @@
                             <div class="hero-quick-launcher">
                                 <div class="launcher-label"><i class="fa-solid fa-bolt" style="color: #fbbf24;"></i> Jalankan Projek Langsung dari Server Lokal:</div>
                                 <div class="launcher-grid">
-                                    <a href="./swoosh/public/" target="_blank" class="launcher-pill">
+                                    <a href="./swoosh/public/" data-open-modal="swoosh" class="launcher-pill">
                                         <i class="fa-solid fa-basketball" style="color: #f97316;"></i>
                                         <span>Swoosh Booking (MVC)</span>
                                     </a>
-                                    <a href="./bb/public/" target="_blank" class="launcher-pill">
+                                    <a href="./bb/public/" data-open-modal="ruangbaca" class="launcher-pill">
                                         <i class="fa-solid fa-newspaper" style="color: var(--accent-cyan);"></i>
                                         <span>RuangBaca (Laravel 10)</span>
                                     </a>
-                                    <a href="./pengaduan-sekolah/public/" target="_blank" class="launcher-pill">
+                                    <a href="./pengaduan-sekolah/public/" data-open-modal="pengaduan_sekolah" class="launcher-pill">
                                         <i class="fa-solid fa-bullhorn" style="color: #10b981;"></i>
                                         <span>SuaraSekolah (Aspirasi)</span>
                                     </a>
-                                    <a href="./perpustakaan-sekolah-digital/public/" target="_blank" class="launcher-pill">
+                                    <a href="./perpustakaan-sekolah-digital/public/" data-open-modal="perpustakaan_digital" class="launcher-pill">
                                         <i class="fa-solid fa-book-bookmark" style="color: #a855f7;"></i>
                                         <span>Perpustakaan Digital</span>
                                     </a>
@@ -408,12 +408,15 @@
                         </div>
 
                         <div class="project-actions">
-                            <a href="./swoosh/public/" target="_blank" class="btn btn-primary btn-sm">
-                                <i class="fa-solid fa-play"></i> Buka Aplikasi Swoosh
-                            </a>
-                            <button class="btn btn-outline btn-sm" data-open-modal="swoosh">
-                                <i class="fa-solid fa-circle-info"></i> Info &amp; Akun Demo
+                            <button class="btn btn-primary btn-sm" data-open-modal="swoosh">
+                                <i class="fa-solid fa-circle-info"></i> Info &amp; Demo
                             </button>
+                            <a href="https://github.com/Alvin-Chandra1/swoosh-new" target="_blank" class="btn btn-outline btn-sm btn-github" title="Lihat Source Code di GitHub">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                            <a href="./swoosh/public/" target="_blank" class="btn btn-outline btn-sm local-app-btn" title="Jalankan di Server Lokal Laragon">
+                                <i class="fa-solid fa-play"></i> Lokal
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -485,12 +488,15 @@
                         </div>
 
                         <div class="project-actions">
-                            <a href="./bb/public/" target="_blank" class="btn btn-primary btn-sm">
-                                <i class="fa-solid fa-play"></i> Buka Aplikasi RuangBaca
-                            </a>
-                            <button class="btn btn-outline btn-sm" data-open-modal="ruangbaca">
-                                <i class="fa-solid fa-circle-info"></i> Info &amp; Panduan
+                            <button class="btn btn-primary btn-sm" data-open-modal="ruangbaca">
+                                <i class="fa-solid fa-circle-info"></i> Info &amp; Demo
                             </button>
+                            <a href="https://github.com/Alvin-Chandra1/ruangbaca" target="_blank" class="btn btn-outline btn-sm btn-github" title="Lihat Source Code di GitHub">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                            <a href="./bb/public/" target="_blank" class="btn btn-outline btn-sm local-app-btn" title="Jalankan di Server Lokal Laragon">
+                                <i class="fa-solid fa-play"></i> Lokal
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -562,12 +568,15 @@
                         </div>
 
                         <div class="project-actions">
-                            <a href="./pengaduan-sekolah/public/" target="_blank" class="btn btn-primary btn-sm">
-                                <i class="fa-solid fa-play"></i> Buka SuaraSekolah
-                            </a>
-                            <button class="btn btn-outline btn-sm" data-open-modal="pengaduan_sekolah">
-                                <i class="fa-solid fa-circle-info"></i> Info &amp; Akun Demo
+                            <button class="btn btn-primary btn-sm" data-open-modal="pengaduan_sekolah">
+                                <i class="fa-solid fa-circle-info"></i> Info &amp; Demo
                             </button>
+                            <a href="https://github.com/Alvin-Chandra1/pengaduan-sekolah" target="_blank" class="btn btn-outline btn-sm btn-github" title="Lihat Source Code di GitHub">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                            <a href="./pengaduan-sekolah/public/" target="_blank" class="btn btn-outline btn-sm local-app-btn" title="Jalankan di Server Lokal Laragon">
+                                <i class="fa-solid fa-play"></i> Lokal
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -639,12 +648,15 @@
                         </div>
 
                         <div class="project-actions">
-                            <a href="./perpustakaan-sekolah-digital/public/" target="_blank" class="btn btn-primary btn-sm">
-                                <i class="fa-solid fa-play"></i> Buka Perpustakaan Digital
-                            </a>
-                            <button class="btn btn-outline btn-sm" data-open-modal="perpustakaan_digital">
-                                <i class="fa-solid fa-circle-info"></i> Info &amp; Akun Demo
+                            <button class="btn btn-primary btn-sm" data-open-modal="perpustakaan_digital">
+                                <i class="fa-solid fa-circle-info"></i> Info &amp; Demo
                             </button>
+                            <a href="https://github.com/Alvin-Chandra1/Latihan_UKK_AlvinChandra_XIIPPLG2" target="_blank" class="btn btn-outline btn-sm btn-github" title="Lihat Source Code di GitHub">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                            <a href="./perpustakaan-sekolah-digital/public/" target="_blank" class="btn btn-outline btn-sm local-app-btn" title="Jalankan di Server Lokal Laragon">
+                                <i class="fa-solid fa-play"></i> Lokal
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1257,9 +1269,9 @@
                     <div id="modal-tech-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem;"></div>
                 </div>
 
-                <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+                <div id="modal-actions-wrap" style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem;">
                     <a id="modal-action-btn" href="#" target="_blank" class="btn btn-primary" style="flex: 1;">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Aplikasi Langsung
+                        <i class="fa-brands fa-github"></i> Lihat Source Code di GitHub
                     </a>
                 </div>
             </div>

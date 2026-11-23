@@ -166,6 +166,7 @@ const projectData = {
   swoosh: {
     title: "Swoosh — Sistem Reservasi Lapangan Basket Terpadu (PHP Native MVC)",
     category: "Full-Stack Web Application • Native PHP 8 MVC Architecture",
+    githubRepo: "https://github.com/Alvin-Chandra1/swoosh-new",
     summary: "Aplikasi reservasi lapangan basket dengan arsitektur PHP Native MVC modern tanpa dependency framework eksternal. Dirancang untuk menangani operasional pemesanan secara end-to-end dengan fokus utama pada pencegahan double-booking di sisi server dan integrasi alur pembayaran fleksibel.",
     architecture: [
       "Arsitektur Model-View-Controller (MVC) murni dengan front-controller pattern di <code>public/index.php</code>.",
@@ -191,6 +192,7 @@ const projectData = {
   ruangbaca: {
     title: "RuangBaca — Platform Publikasi Konten & CMS Editorial (Laravel 10)",
     category: "Full-Stack Web Application • Laravel 10 Framework",
+    githubRepo: "https://github.com/Alvin-Chandra1/ruangbaca",
     summary: "Website editorial artikel online modern yang memadukan kenyamanan pembaca (tipografi Playfair Display & DM Sans) dengan sistem Content Management System (CMS) terstruktur bagi author dan administrator.",
     architecture: [
       "Dibangun di atas <code>Laravel 10</code> dengan arsitektur MVC dan route RESTful yang terstruktur.",
@@ -214,6 +216,7 @@ const projectData = {
   pengaduan_sekolah: {
     title: "SuaraSekolah — Aplikasi Pengaduan & Aspirasi Siswa (Laravel 10)",
     category: "Full-Stack Web Application • Laravel 10 & DomPDF",
+    githubRepo: "https://github.com/Alvin-Chandra1/pengaduan-sekolah",
     summary: "Sistem pengaduan dan aspirasi sekolah digital yang memungkinkan siswa menyampaikan keluhan serta saran fasilitas sarana prasarana sekolah secara transparan, akuntabel, dan terlacak. Dilengkapi panel verifikasi sekolah, perubahan status real-time, dan export dokumen resmi PDF.",
     architecture: [
       "Model & Relasi Database Eloquent lengkap: <code>Siswa</code>, <code>Kategori</code>, <code>InputAspirasi</code>, <code>Aspirasi</code>, dan <code>User</code> (Admin).",
@@ -239,6 +242,7 @@ const projectData = {
   perpustakaan_digital: {
     title: "Perpustakaan Sekolah Digital — Sirkulasi Buku Mandiri (Laravel 10)",
     category: "Full-Stack Web Application • Standar Uji Kompetensi Junior Coder SKKNI",
+    githubRepo: "https://github.com/Alvin-Chandra1/Latihan_UKK_AlvinChandra_XIIPPLG2",
     summary: "Aplikasi sirkulasi buku perpustakaan digital yang dirancang untuk mempermudah kegiatan peminjaman dan pengembalian buku secara mandiri oleh siswa anggota, serta memfasilitasi petugas perpustakaan dalam inventarisasi katalog buku dan audit transaksi sirkulasi.",
     architecture: [
       "Standarisasi 8 Unit Kompetensi SKKNI Pemrogram Junior (Junior Coder FR.IA.02) dengan pola Model-View-Controller.",
@@ -271,52 +275,104 @@ function initProjectModals() {
   const modalArchList = document.getElementById('modal-arch-list');
   const modalCreds = document.getElementById('modal-creds');
   const modalTechTags = document.getElementById('modal-tech-tags');
-  const modalActionBtn = document.getElementById('modal-action-btn');
+  const modalActionsWrap = document.getElementById('modal-actions-wrap');
+
+  const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+  const openModalByKey = (projectKey) => {
+    const data = projectData[projectKey];
+    if (data && modalOverlay) {
+      modalTitle.textContent = data.title;
+      modalCategory.textContent = data.category;
+      modalSummary.textContent = data.summary;
+
+      // Arch list
+      modalArchList.innerHTML = data.architecture.map(item => `
+        <li style="display: flex; gap: 0.6rem; align-items: flex-start;">
+          <i class="fa-solid fa-circle-check" style="color: var(--accent-cyan); margin-top: 0.3rem;"></i>
+          <span>${item}</span>
+        </li>
+      `).join('');
+
+      // Credentials & Hosting notice
+      let credsHTML = `
+        <div style="font-weight: 700; color: var(--text-main); margin-bottom: 0.4rem;">
+          <i class="fa-solid fa-key" style="color: var(--accent-amber);"></i> Akses & Informasi Akun Demo:
+        </div>
+        ${data.credentials.items.map(item => `
+          <div>
+            <span style="color: var(--text-dim);">${item.label}:</span>
+            <strong style="color: var(--accent-cyan); margin-left: 0.35rem;">${item.value}</strong>
+          </div>
+        `).join('')}
+      `;
+
+      if (!isLocal) {
+        credsHTML += `
+          <div class="backend-notice-box" style="margin-top: 0.85rem;">
+            <i class="fa-solid fa-server" style="color: var(--accent-amber); font-size: 1.15rem; margin-top: 0.2rem;"></i>
+            <div>
+              <strong>Informasi Backend & Database:</strong> Projek ini merupakan aplikasi Full-Stack dinamis berbasis backend PHP & database MySQL. Di hosting statis seperti GitHub Pages, aplikasi tidak dapat mengeksekusi PHP secara langsung, namun seluruh arsitektur, kode program lengkap, file database <code>.sql</code>, dan panduan instalasi dapat diakses secara transparan melalui tombol repositori GitHub di bawah ini.
+            </div>
+          </div>
+        `;
+      }
+
+      modalCreds.innerHTML = credsHTML;
+
+      // Tech stack tags
+      modalTechTags.innerHTML = data.techStack.map(tag => `
+        <span class="tech-tag" style="background: rgba(56, 189, 248, 0.1); color: var(--accent-cyan); border-color: rgba(56, 189, 248, 0.25);">${tag}</span>
+      `).join('');
+
+      // Action buttons
+      if (modalActionsWrap) {
+        modalActionsWrap.innerHTML = `
+          <a href="${data.githubRepo}" target="_blank" class="btn btn-primary" style="flex: 1.2;">
+            <i class="fa-brands fa-github"></i> Buka Source Code di GitHub
+          </a>
+          <a href="${data.credentials.url}" target="_blank" class="btn btn-outline" style="flex: 1;" title="${isLocal ? 'Buka di Server Lokal Laragon' : 'Membutuhkan server lokal Laragon / PHP aktif'}">
+            <i class="fa-solid ${isLocal ? 'fa-play' : 'fa-laptop-code'}"></i> ${isLocal ? 'Buka di Localhost' : 'Buka di Server Lokal'}
+          </a>
+        `;
+      }
+
+      modalOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  // Intercept launcher pills if on remote web
+  document.querySelectorAll('.launcher-pill').forEach(pill => {
+    pill.addEventListener('click', (e) => {
+      if (!isLocal) {
+        e.preventDefault();
+        const projectKey = pill.getAttribute('data-open-modal');
+        if (projectKey) {
+          openModalByKey(projectKey);
+        }
+      }
+    });
+  });
+
+  // Intercept local-app-btn if on remote web
+  document.querySelectorAll('.local-app-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      if (!isLocal) {
+        e.preventDefault();
+        showToast('Aplikasi ini membutuhkan server lokal Laragon / PHP & MySQL aktif.');
+        const card = btn.closest('.project-card');
+        const modalBtn = card?.querySelector('[data-open-modal]');
+        if (modalBtn) modalBtn.click();
+      }
+    });
+  });
 
   document.querySelectorAll('[data-open-modal]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const projectKey = btn.getAttribute('data-open-modal');
-      const data = projectData[projectKey];
-
-      if (data && modalOverlay) {
-        modalTitle.textContent = data.title;
-        modalCategory.textContent = data.category;
-        modalSummary.textContent = data.summary;
-
-        // Arch list
-        modalArchList.innerHTML = data.architecture.map(item => `
-          <li style="display: flex; gap: 0.6rem; align-items: flex-start;">
-            <i class="fa-solid fa-circle-check" style="color: var(--accent-cyan); margin-top: 0.3rem;"></i>
-            <span>${item}</span>
-          </li>
-        `).join('');
-
-        // Credentials
-        modalCreds.innerHTML = `
-          <div style="font-weight: 700; color: var(--text-main); margin-bottom: 0.4rem;">
-            <i class="fa-solid fa-key" style="color: var(--accent-amber);"></i> Akses & Informasi Akun Demo:
-          </div>
-          ${data.credentials.items.map(item => `
-            <div>
-              <span style="color: var(--text-dim);">${item.label}:</span>
-              <strong style="color: var(--accent-cyan); margin-left: 0.35rem;">${item.value}</strong>
-            </div>
-          `).join('')}
-        `;
-
-        // Tech stack tags
-        modalTechTags.innerHTML = data.techStack.map(tag => `
-          <span class="tech-tag" style="background: rgba(56, 189, 248, 0.1); color: var(--accent-cyan); border-color: rgba(56, 189, 248, 0.25);">${tag}</span>
-        `).join('');
-
-        // Action button
-        modalActionBtn.setAttribute('href', data.credentials.url);
-        modalActionBtn.innerHTML = `<i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Aplikasi (${data.title.split('—')[0].trim()})`;
-
-        modalOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
+      openModalByKey(projectKey);
     });
   });
 
