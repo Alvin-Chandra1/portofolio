@@ -408,11 +408,14 @@
                         </div>
 
                         <div class="project-actions">
-                            <button class="btn btn-primary btn-sm" data-open-modal="swoosh">
-                                <i class="fa-solid fa-eye"></i> Pratinjau &amp; Detail UI
+                            <a href="previews/swoosh/index.html" target="_blank" class="btn btn-primary btn-sm" title="Buka Halaman Web Asli Swoosh">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Pratinjau Web Asli
+                            </a>
+                            <button type="button" class="btn btn-outline btn-sm" data-open-modal="swoosh">
+                                <i class="fa-solid fa-circle-info"></i> Detail &amp; Demo
                             </button>
                             <a href="https://github.com/Alvin-Chandra1/swoosh-new" target="_blank" class="btn btn-outline btn-sm btn-github" title="Buka Repositori Kode di GitHub">
-                                <i class="fa-brands fa-github"></i> Buka di GitHub
+                                <i class="fa-brands fa-github"></i> GitHub
                             </a>
                         </div>
                     </div>
@@ -485,11 +488,14 @@
                         </div>
 
                         <div class="project-actions">
-                            <button class="btn btn-primary btn-sm" data-open-modal="ruangbaca">
-                                <i class="fa-solid fa-eye"></i> Pratinjau &amp; Detail UI
+                            <a href="previews/ruangbaca/index.html" target="_blank" class="btn btn-primary btn-sm" title="Buka Halaman Web Asli RuangBaca">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Pratinjau Web Asli
+                            </a>
+                            <button type="button" class="btn btn-outline btn-sm" data-open-modal="ruangbaca">
+                                <i class="fa-solid fa-circle-info"></i> Detail &amp; Demo
                             </button>
                             <a href="https://github.com/Alvin-Chandra1/ruangbaca" target="_blank" class="btn btn-outline btn-sm btn-github" title="Buka Repositori Kode di GitHub">
-                                <i class="fa-brands fa-github"></i> Buka di GitHub
+                                <i class="fa-brands fa-github"></i> GitHub
                             </a>
                         </div>
                     </div>
@@ -562,11 +568,14 @@
                         </div>
 
                         <div class="project-actions">
-                            <button class="btn btn-primary btn-sm" data-open-modal="pengaduan_sekolah">
-                                <i class="fa-solid fa-eye"></i> Pratinjau &amp; Detail UI
+                            <a href="previews/suara-sekolah/index.html" target="_blank" class="btn btn-primary btn-sm" title="Buka Halaman Web Asli SuaraSekolah">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Pratinjau Web Asli
+                            </a>
+                            <button type="button" class="btn btn-outline btn-sm" data-open-modal="pengaduan_sekolah">
+                                <i class="fa-solid fa-circle-info"></i> Detail &amp; Demo
                             </button>
                             <a href="https://github.com/Alvin-Chandra1/pengaduan-sekolah" target="_blank" class="btn btn-outline btn-sm btn-github" title="Buka Repositori Kode di GitHub">
-                                <i class="fa-brands fa-github"></i> Buka di GitHub
+                                <i class="fa-brands fa-github"></i> GitHub
                             </a>
                         </div>
                     </div>
@@ -639,11 +648,14 @@
                         </div>
 
                         <div class="project-actions">
-                            <button class="btn btn-primary btn-sm" data-open-modal="perpustakaan_digital">
-                                <i class="fa-solid fa-eye"></i> Pratinjau &amp; Detail UI
+                            <a href="previews/perpustakaan/index.html" target="_blank" class="btn btn-primary btn-sm" title="Buka Halaman Web Asli Perpustakaan Digital">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Pratinjau Web Asli
+                            </a>
+                            <button type="button" class="btn btn-outline btn-sm" data-open-modal="perpustakaan_digital">
+                                <i class="fa-solid fa-circle-info"></i> Detail &amp; Demo
                             </button>
                             <a href="https://github.com/Alvin-Chandra1/perpustakaan-sekolah-digital" target="_blank" class="btn btn-outline btn-sm btn-github" title="Buka Repositori Kode di GitHub">
-                                <i class="fa-brands fa-github"></i> Buka di GitHub
+                                <i class="fa-brands fa-github"></i> GitHub
                             </a>
                         </div>
                     </div>
@@ -956,16 +968,6 @@
                         <div class="skill-progress-item">
                             <div class="skill-info">
                                 <span>Laravel 10 Framework</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar-bg">
-                                <div class="skill-bar-fill" data-width="85%" style="width: 0;"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-progress-item">
-                            <div class="skill-info">
-                                <span>JavaScript (Vanilla &amp; DOM)</span>
                                 <span>85%</span>
                             </div>
                             <div class="skill-bar-bg">

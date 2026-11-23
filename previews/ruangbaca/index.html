@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda — RuangBaca — Baca sesuatu yang berarti</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .preview-topbar {
+            background: #1e1b4b;
+            color: #fff;
+            padding: 8px 16px;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .preview-topbar a {
+            color: #f08a5d;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .preview-topbar a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-topbar">
+        <div><strong>Pratinjau Asli:</strong> RuangBaca — Platform Publikasi & Jurnal Digital</div>
+        <div><a href="../../index.html#portofolio">← Kembali ke Portofolio Alvin Chandra</a></div>
+    </div>
+
+    <div class="site-shell">
+        <header class="site-header">
+            <div class="container nav-wrap">
+                <a href="#" class="brand" aria-label="RuangBaca beranda">
+                    <span class="brand-mark">R</span>
+                    <span>Ruang<span class="brand-light">Baca</span></span>
+                </a>
+                <nav class="main-nav" id="main-nav">
+                    <a href="#" class="active">Beranda</a>
+                    <a href="#">Teknologi</a>
+                    <a href="#">Produktivitas</a>
+                    <a href="#">Desain</a>
+                    <a href="#">Kelola Artikel</a>
+                </nav>
+                <div class="nav-actions">
+                    <a href="#" class="nav-auth-link">Masuk</a>
+                    <a href="#" class="nav-register-link">Daftar</a>
+                    <button class="icon-button theme-toggle" type="button" aria-label="Ubah tema" title="Ubah tema">
+                        <span class="theme-sun">☼</span><span class="theme-moon">☽</span>
+                    </button>
+                    <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="container hero-grid">
+                    <div class="hero-copy">
+                        <span class="eyebrow"><span class="eyebrow-dot"></span> Jurnal digital pilihan</span>
+                        <h1>Baca. Pikirkan.<br><em>Tumbuh.</em></h1>
+                        <p class="hero-description">Kumpulan cerita, ide, dan perspektif yang dipilih untuk menemani rasa ingin tahu kamu setiap hari.</p>
+                        <form class="search-form hero-search" action="#" method="GET">
+                            <span class="search-icon">🔍</span>
+                            <input type="search" name="search" placeholder="Cari artikel yang ingin kamu baca..." aria-label="Cari artikel">
+                            <button type="button">Cari</button>
+                        </form>
+                        <div class="hero-tags">
+                            <span>Topik populer</span>
+                            <a href="#">Teknologi</a>
+                            <a href="#">Desain</a>
+                            <a href="#">Karier</a>
+                        </div>
+                    </div>
+                    <div class="hero-art" aria-hidden="true">
+                        <div class="orb orb-one"></div>
+                        <div class="orb orb-two"></div>
+                        <div class="hero-card-floating">
+                            <span class="floating-label">Editor's note</span>
+                            <p>“Ide yang baik layak diberi waktu untuk dibaca.”</p>
+                            <span class="floating-line"></span>
+                        </div>
+                        <div class="hero-scribble">✦</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section container">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">Pilihan terbaru</span>
+                        <h2>Temukan bacaanmu</h2>
+                    </div>
+                    <span class="result-count">4 artikel tersedia</span>
+                </div>
+
+                <div class="article-grid">
+                    <!-- Artikel 1 -->
+                    <article class="article-card">
+                        <a href="#" class="card-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85" alt="Mengenal Internet of Things" class="card-image" loading="lazy">
+                            <span class="category-pill" style="--pill-color: #6757ff">Teknologi</span>
+                        </a>
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span>30 Agu 2026</span>
+                                <span class="meta-separator">•</span>
+                                <span>34 suka</span>
+                            </div>
+                            <h3><a href="#">Mengenal Internet of Things di Kehidupan Sehari-hari</a></h3>
+                            <p>Bagaimana perangkat di sekitar kita saling terhubung dan membuat aktivitas menjadi lebih sederhana dan efisien.</p>
+                            <a href="#" class="read-more">Baca artikel <span>↗</span></a>
+                        </div>
+                    </article>
+
+                    <!-- Artikel 2 -->
+                    <article class="article-card">
+                        <a href="#" class="card-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=85" alt="Seni Mengatur Fokus" class="card-image" loading="lazy">
+                            <span class="category-pill" style="--pill-color: #f08a5d">Produktivitas</span>
+                        </a>
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span>28 Agu 2026</span>
+                                <span class="meta-separator">•</span>
+                                <span>52 suka</span>
+                            </div>
+                            <h3><a href="#">Seni Mengatur Fokus di Tengah Distraksi Digital</a></h3>
+                            <p>Strategi sederhana untuk bekerja lebih dalam (deep work), tanpa harus mematikan seluruh dunia digital.</p>
+                            <a href="#" class="read-more">Baca artikel <span>↗</span></a>
+                        </div>
+                    </article>
+
+                    <!-- Artikel 3 -->
+                    <article class="article-card">
+                        <a href="#" class="card-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1200&q=85" alt="Whitespace dalam Desain" class="card-image" loading="lazy">
+                            <span class="category-pill" style="--pill-color: #0ea5a8">Desain</span>
+                        </a>
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span>26 Agu 2026</span>
+                                <span class="meta-separator">•</span>
+                                <span>41 suka</span>
+                            </div>
+                            <h3><a href="#">Mengapa Ruang Kosong Membuat Desain Lebih Nyaman</a></h3>
+                            <p>Whitespace bukan area yang terbuang. Ia membantu mata beristirahat dan pesan tersampaikan dengan lebih jernih.</p>
+                            <a href="#" class="read-more">Baca artikel <span>↗</span></a>
+                        </div>
+                    </article>
+
+                    <!-- Artikel 4 -->
+                    <article class="article-card">
+                        <a href="#" class="card-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85" alt="Portofolio yang Bercerita" class="card-image" loading="lazy">
+                            <span class="category-pill" style="--pill-color: #df5f92">Karier</span>
+                        </a>
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span>24 Agu 2026</span>
+                                <span class="meta-separator">•</span>
+                                <span>27 suka</span>
+                            </div>
+                            <h3><a href="#">Membangun Portofolio yang Bercerita, Bukan Sekadar Pamer</a></h3>
+                            <p>Portofolio yang kuat menunjukkan alur pemikiran, proses pemecahan masalah, dan dampak dari solusi yang dibuat.</p>
+                            <a href="#" class="read-more">Baca artikel <span>↗</span></a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <div>
+                    <a href="#" class="brand footer-brand"><span class="brand-mark">R</span><span>Ruang<span class="brand-light">Baca</span></span></a>
+                    <p class="footer-copy">Tempat kecil untuk ide-ide besar.</p>
+                </div>
+                <div class="footer-meta">
+                    <span>© 2026 RuangBaca · Dikembangkan oleh Alvin Chandra</span>
+                    <span>Dibuat dengan rasa ingin tahu.</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

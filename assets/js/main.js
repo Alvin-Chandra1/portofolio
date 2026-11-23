@@ -166,6 +166,7 @@ const projectData = {
   swoosh: {
     title: "Swoosh — Sistem Reservasi Lapangan Basket Terpadu (PHP Native MVC)",
     category: "Full-Stack Web Application • Native PHP 8 MVC Architecture",
+    previewUrl: "previews/swoosh/index.html",
     githubRepo: "https://github.com/Alvin-Chandra1/swoosh-new",
     summary: "Aplikasi reservasi lapangan basket dengan arsitektur PHP Native MVC modern tanpa dependency framework eksternal. Dirancang untuk menangani operasional pemesanan secara end-to-end dengan fokus utama pada pencegahan double-booking di sisi server dan integrasi alur pembayaran fleksibel.",
     uiPreviewHTML: `
@@ -243,6 +244,7 @@ const projectData = {
   ruangbaca: {
     title: "RuangBaca — Platform Publikasi Konten & CMS Editorial (Laravel 10)",
     category: "Full-Stack Web Application • Laravel 10 Framework",
+    previewUrl: "previews/ruangbaca/index.html",
     githubRepo: "https://github.com/Alvin-Chandra1/ruangbaca",
     summary: "Website editorial artikel online modern yang memadukan kenyamanan pembaca (tipografi Playfair Display & DM Sans) dengan sistem Content Management System (CMS) terstruktur bagi author dan administrator.",
     uiPreviewHTML: `
@@ -297,6 +299,7 @@ const projectData = {
   pengaduan_sekolah: {
     title: "SuaraSekolah — Aplikasi Pengaduan & Aspirasi Siswa (Laravel 10)",
     category: "Full-Stack Web Application • Laravel 10 & DomPDF",
+    previewUrl: "previews/suara-sekolah/index.html",
     githubRepo: "https://github.com/Alvin-Chandra1/pengaduan-sekolah",
     summary: "Sistem pengaduan dan aspirasi sekolah digital yang memungkinkan siswa menyampaikan keluhan serta saran fasilitas sarana prasarana sekolah secara transparan, akuntabel, dan terlacak. Dilengkapi panel verifikasi sekolah, perubahan status real-time, dan export dokumen resmi PDF.",
     uiPreviewHTML: `
@@ -361,6 +364,7 @@ const projectData = {
   perpustakaan_digital: {
     title: "Perpustakaan Sekolah Digital — Sirkulasi Buku Mandiri (Laravel 10)",
     category: "Full-Stack Web Application • Standar Uji Kompetensi Junior Coder SKKNI",
+    previewUrl: "previews/perpustakaan/index.html",
     githubRepo: "https://github.com/Alvin-Chandra1/perpustakaan-sekolah-digital",
     summary: "Aplikasi sirkulasi buku perpustakaan digital yang dirancang untuk mempermudah kegiatan peminjaman dan pengembalian buku secara mandiri oleh siswa anggota, serta memfasilitasi petugas perpustakaan dalam inventarisasi katalog buku dan audit transaksi sirkulasi.",
     uiPreviewHTML: `
@@ -442,9 +446,26 @@ function initProjectModals() {
       modalCategory.textContent = data.category;
       modalSummary.textContent = data.summary;
 
-      // Render realistic UI Preview
+      // Render authentic live UI Preview iframe
       if (modalUiPreview) {
-        modalUiPreview.innerHTML = data.uiPreviewHTML || '';
+        modalUiPreview.innerHTML = `
+          <div class="preview-window">
+            <div class="preview-window-bar">
+              <div class="preview-window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="preview-window-url">${data.previewUrl || 'previews/index.html'}</span>
+              <a href="${data.previewUrl}" target="_blank" class="badge badge-emerald" style="text-decoration:none; display:inline-flex; align-items:center; gap:5px; font-size:0.75rem; padding:3px 9px; font-weight:700;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Layar Penuh
+              </a>
+            </div>
+            <div style="background:#fff; width:100%; height:460px; overflow:hidden; border-radius:0 0 12px 12px;">
+              <iframe src="${data.previewUrl}" title="${data.title}" style="width:100%; height:100%; border:none; display:block;"></iframe>
+            </div>
+          </div>
+        `;
       }
 
       // Arch list
@@ -479,11 +500,14 @@ function initProjectModals() {
         <span class="tech-tag" style="background: rgba(56, 189, 248, 0.1); color: var(--accent-cyan); border-color: rgba(56, 189, 248, 0.25);">${tag}</span>
       `).join('');
 
-      // Action buttons - Direct to GitHub
+      // Action buttons: Live Preview & GitHub
       if (modalActionsWrap) {
         modalActionsWrap.innerHTML = `
-          <a href="${data.githubRepo}" target="_blank" class="btn btn-primary" style="flex: 1; justify-content: center; padding: 0.85rem 1.5rem; font-size: 1rem;">
-            <i class="fa-brands fa-github" style="font-size: 1.15rem;"></i> Buka Repositori Kode Sumber di GitHub
+          <a href="${data.previewUrl}" target="_blank" class="btn btn-primary" style="flex: 1; justify-content: center; padding: 0.85rem 1.25rem; font-size: 0.95rem;">
+            <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 1rem;"></i> Buka Tampilan Asli Projek
+          </a>
+          <a href="${data.githubRepo}" target="_blank" class="btn btn-outline btn-github" style="flex: 1; justify-content: center; padding: 0.85rem 1.25rem; font-size: 0.95rem;">
+            <i class="fa-brands fa-github" style="font-size: 1.15rem;"></i> Repositori GitHub
           </a>
         `;
       }

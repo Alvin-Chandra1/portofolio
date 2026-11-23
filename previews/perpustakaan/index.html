@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Administrator — Perpustakaan Digital SMK Cinta Kasih Tzu Chi</title>
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --sidebar-bg: #0f172a;
+            --sidebar-hover: #1e293b;
+            --accent-color: #38bdf8;
+            --body-bg: #f8fafc;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--body-bg);
+            color: #334155;
+            min-height: 100vh;
+        }
+
+        .preview-topbar {
+            background: #090d16;
+            color: #fff;
+            padding: 8px 16px;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+        .preview-topbar a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .preview-topbar a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar-brand-custom {
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sidebar-wrapper {
+            background-color: var(--sidebar-bg);
+            min-height: calc(100vh - 37px);
+            color: #94a3b8;
+            transition: all 0.3s;
+        }
+
+        .sidebar-brand {
+            padding: 24px 20px;
+            color: #ffffff;
+            font-size: 1.15rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .sidebar-brand i {
+            color: var(--accent-color);
+        }
+
+        .sidebar-menu {
+            list-style: none;
+            padding: 16px 12px;
+            margin: 0;
+        }
+
+        .sidebar-menu-header {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            color: #64748b;
+            padding: 10px 12px 6px;
+        }
+
+        .sidebar-menu li a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            color: #94a3b8;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.92rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            margin-bottom: 4px;
+        }
+
+        .sidebar-menu li a:hover {
+            background-color: var(--sidebar-hover);
+            color: #ffffff;
+        }
+
+        .sidebar-menu li a.active {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+        }
+
+        .main-content {
+            padding: 24px 30px;
+        }
+
+        .card-custom {
+            background: #ffffff;
+            border-radius: 14px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+        }
+
+        .avatar-circle {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .table-custom {
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        .table-custom thead th {
+            background-color: #f1f5f9;
+            color: #475569;
+            font-weight: 600;
+            font-size: 0.84rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: none;
+            padding: 12px 16px;
+        }
+
+        .table-custom tbody td {
+            padding: 14px 16px;
+            vertical-align: middle;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 0.92rem;
+        }
+
+        .badge-status-pinjam {
+            background-color: #fef3c7;
+            color: #d97706;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+        }
+
+        .badge-status-kembali {
+            background-color: #dcfce7;
+            color: #15803d;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+            font-weight: 500;
+            border-radius: 8px;
+            padding: 8px 16px;
+            transition: all 0.2s;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: var(--primary-hover);
+            border-color: var(--primary-hover);
+            color: white;
+        }
+
+        .top-navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 14px 30px;
+        }
+
+        @media (max-width: 991.98px) {
+            .sidebar-wrapper {
+                min-height: auto;
+            }
+            .main-content {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-topbar">
+        <div><strong>Pratinjau Asli:</strong> Perpustakaan Sekolah Digital — Dashboard Admin & Manajemen Sirkulasi</div>
+        <div><a href="../../index.html#portofolio">← Kembali ke Portofolio Alvin Chandra</a></div>
+    </div>
+
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <!-- Sidebar -->
+            <div class="col-lg-2 sidebar-wrapper d-none d-lg-block">
+                <div class="sidebar-brand">
+                    <i class="fa-solid fa-book-bookmark fs-4"></i>
+                    <div>
+                        <span>Tzu Chi Lib</span>
+                        <small class="d-block text-secondary" style="font-size: 0.7rem; font-weight: 400;">Perpustakaan Digital</small>
+                    </div>
+                </div>
+
+                <ul class="sidebar-menu">
+                    <li class="sidebar-menu-header">Menu Utama</li>
+                    <li>
+                        <a href="#" class="active">
+                            <i class="fa-solid fa-gauge-high"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-book"></i>
+                            <span>Kelola Buku</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-users"></i>
+                            <span>Data Anggota</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu-header">Sirkulasi</li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span>Peminjaman</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-arrow-rotate-left"></i>
+                            <span>Pengembalian</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            <span>Riwayat Transaksi</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu-header">Laporan</li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span>Cetak Laporan</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Content Area -->
+            <div class="col-lg-10 d-flex flex-column" style="min-height: calc(100vh - 37px);">
+                <!-- Top Navbar -->
+                <nav class="top-navbar d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="fs-5 fw-bold text-dark">Sistem Perpustakaan Digital</span>
+                        <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill">Tahun Ajaran 2026/2027</span>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="text-end d-none d-sm-block">
+                            <div class="fw-bold text-dark small">Alvin Chandra</div>
+                            <small class="text-muted" style="font-size: 0.75rem;">Administrator Utama</small>
+                        </div>
+                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center fw-bold" style="width: 38px; height: 38px;">
+                            AC
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Main Content -->
+                <div class="main-content flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                        <div>
+                            <h3 class="fw-bold mb-1 text-dark">Dashboard Administrator</h3>
+                            <p class="text-muted mb-0 small">Ringkasan aktivitas operasional dan sirkulasi Perpustakaan Sekolah Digital SMK Cinta Kasih Tzu Chi</p>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-plus me-1"></i> Tambah Buku</button>
+                            <button class="btn btn-primary-custom btn-sm"><i class="fa-solid fa-cart-plus me-1"></i> Catat Transaksi</button>
+                        </div>
+                    </div>
+
+                    <!-- Statistik Cards -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="card card-custom p-3 border-start border-4 border-primary">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <div class="text-muted small fw-semibold text-uppercase">Total Judul Buku</div>
+                                        <h3 class="fw-bold my-1 text-dark">142</h3>
+                                        <div class="small text-muted">Stok fisik: <span class="fw-bold text-primary">580</span> eks.</div>
+                                    </div>
+                                    <div class="avatar-circle bg-primary-subtle text-primary fs-4">
+                                        <i class="fa-solid fa-book"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="card card-custom p-3 border-start border-4 border-success">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <div class="text-muted small fw-semibold text-uppercase">Anggota Siswa</div>
+                                        <h3 class="fw-bold my-1 text-dark">326</h3>
+                                        <div class="small text-muted">Siswa terdaftar aktif</div>
+                                    </div>
+                                    <div class="avatar-circle bg-success-subtle text-success fs-4">
+                                        <i class="fa-solid fa-users"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="card card-custom p-3 border-start border-4 border-warning">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <div class="text-muted small fw-semibold text-uppercase">Buku Dipinjam</div>
+                                        <h3 class="fw-bold my-1 text-dark">28</h3>
+                                        <div class="small text-warning fw-semibold">Perlu pengembalian</div>
+                                    </div>
+                                    <div class="avatar-circle bg-warning-subtle text-warning fs-4">
+                                        <i class="fa-solid fa-hand-holding-hand"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="card card-custom p-3 border-start border-4 border-info">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <div class="text-muted small fw-semibold text-uppercase">Transaksi Selesai</div>
+                                        <h3 class="fw-bold my-1 text-dark">194</h3>
+                                        <div class="small text-success fw-semibold">Buku telah dikembalikan</div>
+                                    </div>
+                                    <div class="avatar-circle bg-info-subtle text-info fs-4">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transaksi Terbaru Table -->
+                    <div class="card card-custom p-4 mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <h5 class="fw-bold mb-1 text-dark"><i class="fa-solid fa-clock-rotate-left me-2 text-primary"></i>Transaksi Sirkulasi Terbaru</h5>
+                                <p class="text-muted small mb-0">Daftar siswa yang sedang meminjam atau mengembalikan buku</p>
+                            </div>
+                            <span class="badge bg-light text-secondary border">Real-time update</span>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-custom align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>Kode Transaksi</th>
+                                        <th>Nama Siswa (Peminjam)</th>
+                                        <th>Judul Buku</th>
+                                        <th>Tgl Pinjam</th>
+                                        <th>Jatuh Tempo</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="fw-bold text-primary">TRX-2026-089</span></td>
+                                        <td>
+                                            <div class="fw-semibold">Jessica Angelina</div>
+                                            <small class="text-muted">NIS: 1021045 · XII PPLG 2</small>
+                                        </td>
+                                        <td>Clean Code: A Handbook of Agile Software</td>
+                                        <td>20 Nov 2026</td>
+                                        <td>27 Nov 2026</td>
+                                        <td><span class="badge-status-pinjam">Dipinjam</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="fw-bold text-primary">TRX-2026-088</span></td>
+                                        <td>
+                                            <div class="fw-semibold">Budi Santoso</div>
+                                            <small class="text-muted">NIS: 1021012 · XI PPLG 1</small>
+                                        </td>
+                                        <td>Belajar Dasar Pemrograman Web Modern</td>
+                                        <td>18 Nov 2026</td>
+                                        <td>25 Nov 2026</td>
+                                        <td><span class="badge-status-pinjam">Dipinjam</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="fw-bold text-primary">TRX-2026-087</span></td>
+                                        <td>
+                                            <div class="fw-semibold">Siti Nurhaliza</div>
+                                            <small class="text-muted">NIS: 1021088 · XII AKL 1</small>
+                                        </td>
+                                        <td>Akuntansi Biaya dan Manajemen</td>
+                                        <td>14 Nov 2026</td>
+                                        <td>21 Nov 2026</td>
+                                        <td><span class="badge-status-kembali"><i class="fa-solid fa-check me-1"></i>Dikembalikan</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="fw-bold text-primary">TRX-2026-086</span></td>
+                                        <td>
+                                            <div class="fw-semibold">Michael Wijaya</div>
+                                            <small class="text-muted">NIS: 1021004 · X PPLG 2</small>
+                                        </td>
+                                        <td>Algoritma & Struktur Data dengan PHP & Python</td>
+                                        <td>12 Nov 2026</td>
+                                        <td>19 Nov 2026</td>
+                                        <td><span class="badge-status-kembali"><i class="fa-solid fa-check me-1"></i>Dikembalikan</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <footer class="bg-white border-top py-3 text-center text-muted small mt-auto">
+                    Perpustakaan Sekolah Digital · Dikembangkan oleh Alvin Chandra (SMK Cinta Kasih Tzu Chi)
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
