@@ -168,6 +168,58 @@ const projectData = {
     category: "Full-Stack Web Application • Native PHP 8 MVC Architecture",
     githubRepo: "https://github.com/Alvin-Chandra1/swoosh-new",
     summary: "Aplikasi reservasi lapangan basket dengan arsitektur PHP Native MVC modern tanpa dependency framework eksternal. Dirancang untuk menangani operasional pemesanan secara end-to-end dengan fokus utama pada pencegahan double-booking di sisi server dan integrasi alur pembayaran fleksibel.",
+    uiPreviewHTML: `
+      <div class="preview-window">
+        <div class="preview-window-bar">
+          <div class="preview-window-dots"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
+          <span class="preview-window-url">https://swoosh-arena.app/booking/court-1</span>
+          <span class="badge badge-emerald" style="font-size:0.65rem; padding:1px 6px;">PHP MVC Demo</span>
+        </div>
+        <div class="preview-window-content">
+          <div class="preview-ui-header">
+            <div>
+              <div style="font-weight:800; font-size:1.05rem; color:#fff;"><i class="fa-solid fa-basketball" style="color:#f97316;"></i> Swoosh Sports Arena</div>
+              <div style="font-size:0.75rem; color:var(--text-dim);">Jadwal Sewa Lapangan Basket Terpadu • Server-Side Lock Active</div>
+            </div>
+            <span class="badge badge-amber" style="font-size:0.75rem;"><i class="fa-solid fa-calendar-day"></i> Hari Ini</span>
+          </div>
+          <div class="preview-ui-grid">
+            <div class="preview-ui-box">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <strong style="color:#fff; font-size:0.85rem;">16:00 - 17:00</strong>
+                <span style="color:#34d399; font-size:0.75rem; font-weight:700;">Tersedia</span>
+              </div>
+              <div style="font-size:0.75rem; color:var(--text-dim);">Tarif: Rp 150.000 / Jam</div>
+            </div>
+            <div class="preview-ui-box highlight">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <strong style="color:var(--accent-cyan); font-size:0.85rem;">17:00 - 18:00</strong>
+                <span style="color:var(--accent-cyan); font-size:0.75rem; font-weight:700;">Slot Dipilih</span>
+              </div>
+              <div style="font-size:0.75rem; color:var(--text-dim);">Lapangan Utama (Indoor Parquet)</div>
+            </div>
+            <div class="preview-ui-box" style="opacity:0.65; border-color:rgba(239,68,68,0.4);">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <strong style="color:#f87171; font-size:0.85rem;">18:00 - 20:00</strong>
+                <span style="color:#f87171; font-size:0.75rem; font-weight:700;">Dibooking</span>
+              </div>
+              <div style="font-size:0.75rem; color:var(--text-dim);">Pencegahan Bentrok Aktif</div>
+            </div>
+            <div class="preview-ui-box">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <strong style="color:#fff; font-size:0.85rem;">23:00 - 01:00 <span style="color:#38bdf8; font-size:0.7rem;">(+1 hari)</span></strong>
+                <span style="color:#34d399; font-size:0.75rem; font-weight:700;">Midnight Open</span>
+              </div>
+              <div style="font-size:0.75rem; color:var(--text-dim);">Slot Lintas Hari Terverifikasi</div>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:0.6rem 0.9rem; background:rgba(0,0,0,0.3); border-radius:8px; font-size:0.85rem;">
+            <span>Alur Transaksi: <strong style="color:#34d399;">Simulasi Midtrans API Siap</strong></span>
+            <span style="font-family:var(--font-mono); font-weight:700; color:#fff;">Total: Rp 150.000</span>
+          </div>
+        </div>
+      </div>
+    `,
     architecture: [
       "Arsitektur Model-View-Controller (MVC) murni dengan front-controller pattern di <code>public/index.php</code>.",
       "Database MySQL menggunakan <code>PDO Prepared Statements</code> untuk perlindungan penuh terhadap kerentanan SQL Injection.",
@@ -179,11 +231,10 @@ const projectData = {
       url: "./swoosh/public/",
       demoType: "login",
       items: [
-        { label: "URL Akses", value: "./swoosh/public/" },
-        { label: "Email Admin", value: "admin@swoosh.test" },
-        { label: "Password", value: "password" },
-        { label: "Kode Rahasia Admin Baru", value: "SwooshAdmin2026" },
-        { label: "Catatan User", value: "Pengunjung dapat langsung mendaftar akun baru melalui menu Registrasi untuk role User." }
+        { label: "Repositori GitHub", value: "github.com/Alvin-Chandra1/swoosh-new" },
+        { label: "Email Admin Demo", value: "admin@swoosh.test" },
+        { label: "Password Admin", value: "password" },
+        { label: "Kode Rahasia Admin Baru", value: "SwooshAdmin2026" }
       ]
     },
     techStack: ["PHP 8 Native", "MVC Architecture", "MySQL / PDO", "CSRF Protection", "Vanilla JavaScript", "CSS Modern System", "Midtrans Payment API"]
@@ -194,6 +245,36 @@ const projectData = {
     category: "Full-Stack Web Application • Laravel 10 Framework",
     githubRepo: "https://github.com/Alvin-Chandra1/ruangbaca",
     summary: "Website editorial artikel online modern yang memadukan kenyamanan pembaca (tipografi Playfair Display & DM Sans) dengan sistem Content Management System (CMS) terstruktur bagi author dan administrator.",
+    uiPreviewHTML: `
+      <div class="preview-window">
+        <div class="preview-window-bar">
+          <div class="preview-window-dots"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
+          <span class="preview-window-url">https://ruangbaca.dev/articles/clean-architecture</span>
+          <span class="badge badge-purple" style="font-size:0.65rem; padding:1px 6px;">Laravel 10 CMS</span>
+        </div>
+        <div class="preview-window-content">
+          <div class="preview-ui-header">
+            <div>
+              <div style="font-weight:800; font-size:1.05rem; color:#fff;"><i class="fa-solid fa-book-open-reader" style="color:var(--accent-cyan);"></i> RuangBaca Magazine</div>
+              <div style="font-size:0.75rem; color:var(--text-dim);">Platform Editorial Konten &amp; Publikasi Digital</div>
+            </div>
+            <div style="display:flex; gap:0.4rem;">
+              <span class="tech-tag" style="font-size:0.7rem;">Teknologi</span>
+              <span class="tech-tag" style="font-size:0.7rem;">Produktivitas</span>
+            </div>
+          </div>
+          <div style="background:linear-gradient(135deg, rgba(56,189,248,0.1), rgba(168,85,247,0.1)); border:1px solid var(--border-color); border-radius:8px; padding:1rem;">
+            <span class="badge badge-cyan" style="font-size:0.7rem; margin-bottom:0.4rem;">Artikel Unggulan</span>
+            <h4 style="color:#fff; font-size:1rem; font-weight:700; margin-bottom:0.35rem;">Membangun Arsitektur Web Modern yang Efisien &amp; Terstruktur</h4>
+            <p style="font-size:0.8rem; color:var(--text-muted); line-height:1.5;">Penerapan pola MVC, pemisahan logika bisnis (Business Logic), dan pengamanan database menggunakan query berparameter.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.6rem; font-size:0.75rem; color:var(--text-dim);">
+              <span><i class="fa-regular fa-user"></i> Penulis: Alvin Chandra</span>
+              <span><i class="fa-regular fa-clock"></i> 5 Menit Baca</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    `,
     architecture: [
       "Dibangun di atas <code>Laravel 10</code> dengan arsitektur MVC dan route RESTful yang terstruktur.",
       "Sistem Autentikasi Pengguna & Admin terintegrasi dengan proteksi route middleware.",
@@ -205,9 +286,9 @@ const projectData = {
       url: "./bb/public/",
       demoType: "info",
       items: [
-        { label: "URL Akses", value: "./bb/public/" },
-        { label: "Akses Kelola Artikel", value: "Tersedia tombol 'Kelola Artikel' di bilah navigasi RuangBaca." },
-        { label: "Fitur Interaktif", value: "Pengunjung dapat langsung membuat, mengedit, atau menghapus artikel serta mencoba toggle tema dark/light." }
+        { label: "Repositori GitHub", value: "github.com/Alvin-Chandra1/ruangbaca" },
+        { label: "Akses Kelola Artikel", value: "Tersedia modul dashboard artikel & moderasi kategori." },
+        { label: "Status Stack", value: "Laravel 10 MVC • Blade Engine • MySQL Database" }
       ]
     },
     techStack: ["Laravel 10", "PHP 8.1+", "Blade Templating", "MySQL", "Authentication Middleware", "Modern CSS System"]
@@ -218,6 +299,46 @@ const projectData = {
     category: "Full-Stack Web Application • Laravel 10 & DomPDF",
     githubRepo: "https://github.com/Alvin-Chandra1/pengaduan-sekolah",
     summary: "Sistem pengaduan dan aspirasi sekolah digital yang memungkinkan siswa menyampaikan keluhan serta saran fasilitas sarana prasarana sekolah secara transparan, akuntabel, dan terlacak. Dilengkapi panel verifikasi sekolah, perubahan status real-time, dan export dokumen resmi PDF.",
+    uiPreviewHTML: `
+      <div class="preview-window">
+        <div class="preview-window-bar">
+          <div class="preview-window-dots"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
+          <span class="preview-window-url">https://suarasekolah.sch.id/tiket/ASP-2026-089</span>
+          <span class="badge badge-emerald" style="font-size:0.65rem; padding:1px 6px;">DomPDF Integrated</span>
+        </div>
+        <div class="preview-window-content">
+          <div class="preview-ui-header">
+            <div>
+              <div style="font-weight:800; font-size:1.05rem; color:#fff;"><i class="fa-solid fa-bullhorn" style="color:#10b981;"></i> SuaraSekolah — Portal Pengaduan Siswa</div>
+              <div style="font-size:0.75rem; color:var(--text-dim);">Sistem Pelaporan Sarana Prasarana Sekolah Terverifikasi</div>
+            </div>
+            <span class="badge badge-amber" style="font-size:0.75rem;"><i class="fa-solid fa-spinner fa-spin"></i> Status: Proses</span>
+          </div>
+          <div class="preview-ui-grid">
+            <div class="preview-ui-box">
+              <span style="font-size:0.7rem; color:var(--text-dim); text-transform:uppercase;">Nomor Tiket</span>
+              <strong style="color:var(--accent-cyan); font-family:var(--font-mono); font-size:0.85rem;">#ASP-2026-089</strong>
+            </div>
+            <div class="preview-ui-box">
+              <span style="font-size:0.7rem; color:var(--text-dim); text-transform:uppercase;">Identitas Pelapor</span>
+              <strong style="color:#fff; font-size:0.85rem;">NIS: 1001 (Alvin Chandra)</strong>
+            </div>
+            <div class="preview-ui-box">
+              <span style="font-size:0.7rem; color:var(--text-dim); text-transform:uppercase;">Lokasi Fasilitas</span>
+              <strong style="color:#fff; font-size:0.85rem;">Lab Komputer 3 - PPLG</strong>
+            </div>
+          </div>
+          <div style="background:rgba(0,0,0,0.25); border:1px solid var(--border-color); border-radius:8px; padding:0.85rem;">
+            <div style="font-size:0.75rem; color:var(--accent-emerald); font-weight:700; margin-bottom:0.25rem;"><i class="fa-solid fa-comment-dots"></i> Tanggapan Resmi Sekolah:</div>
+            <div style="font-size:0.8rem; color:var(--text-muted);">"Keluhan mengenai perbaikan terminal kabel LAN telah diterima dan sedang dikerjakan oleh teknisi Sarpras hari ini."</div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.785rem; color:var(--text-dim);">
+            <span><i class="fa-solid fa-file-pdf" style="color:#ef4444;"></i> Format Dokumen Resmi: PDF Kop Surat</span>
+            <span style="color:var(--accent-cyan); font-weight:600;"><i class="fa-solid fa-shield-halved"></i> Terverifikasi Sistem</span>
+          </div>
+        </div>
+      </div>
+    `,
     architecture: [
       "Model & Relasi Database Eloquent lengkap: <code>Siswa</code>, <code>Kategori</code>, <code>InputAspirasi</code>, <code>Aspirasi</code>, dan <code>User</code> (Admin).",
       "Fitur Export PDF Resmi: Penerbitan Rekap Laporan PDF lengkap dengan kop surat sekolah dan tanda tangan pengesahan (<code>/admin/aspirasi/export/pdf</code>).",
@@ -229,11 +350,9 @@ const projectData = {
       url: "./pengaduan-sekolah/public/",
       demoType: "login",
       items: [
-        { label: "URL Aplikasi (Frontend Siswa)", value: "./pengaduan-sekolah/public/" },
-        { label: "URL Login Admin", value: "./pengaduan-sekolah/public/login" },
-        { label: "Username / Email Admin", value: "admin atau admin@sekolah.sch.id" },
-        { label: "Password Admin", value: "admin123" },
-        { label: "Demo Pengaduan Siswa", value: "Gunakan NIS contoh: 1001 atau 1002 untuk mengajukan aspirasi di frontend." }
+        { label: "Repositori GitHub", value: "github.com/Alvin-Chandra1/pengaduan-sekolah" },
+        { label: "Akun Admin Pengujian", value: "Username: admin | Password: admin123" },
+        { label: "Akun Siswa", value: "Gunakan NIS: 1001 atau 1002" }
       ]
     },
     techStack: ["Laravel 10", "PHP 8.1+", "DomPDF", "MySQL", "Eloquent ORM", "Bootstrap 5", "FontAwesome 6"]
@@ -242,8 +361,47 @@ const projectData = {
   perpustakaan_digital: {
     title: "Perpustakaan Sekolah Digital — Sirkulasi Buku Mandiri (Laravel 10)",
     category: "Full-Stack Web Application • Standar Uji Kompetensi Junior Coder SKKNI",
-    githubRepo: "https://github.com/Alvin-Chandra1/Latihan_UKK_AlvinChandra_XIIPPLG2",
+    githubRepo: "https://github.com/Alvin-Chandra1/perpustakaan-sekolah-digital",
     summary: "Aplikasi sirkulasi buku perpustakaan digital yang dirancang untuk mempermudah kegiatan peminjaman dan pengembalian buku secara mandiri oleh siswa anggota, serta memfasilitasi petugas perpustakaan dalam inventarisasi katalog buku dan audit transaksi sirkulasi.",
+    uiPreviewHTML: `
+      <div class="preview-window">
+        <div class="preview-window-bar">
+          <div class="preview-window-dots"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
+          <span class="preview-window-url">https://perpustakaan.sch.id/siswa/dashboard</span>
+          <span class="badge badge-purple" style="font-size:0.65rem; padding:1px 6px;">SKKNI FR.IA.02</span>
+        </div>
+        <div class="preview-window-content">
+          <div class="preview-ui-header">
+            <div>
+              <div style="font-weight:800; font-size:1.05rem; color:#fff;"><i class="fa-solid fa-book-bookmark" style="color:#a855f7;"></i> Perpustakaan Sekolah Digital</div>
+              <div style="font-size:0.75rem; color:var(--text-dim);">Sistem Sirkulasi Mandiri &amp; Manajemen Katalog Buku</div>
+            </div>
+            <span class="badge badge-emerald" style="font-size:0.75rem;"><i class="fa-solid fa-id-card"></i> Anggota Aktif</span>
+          </div>
+          <div class="preview-ui-grid">
+            <div class="preview-ui-box highlight">
+              <span style="font-size:0.7rem; color:var(--accent-cyan); text-transform:uppercase; font-weight:700;">Buku Sedang Dipinjam</span>
+              <strong style="color:#fff; font-size:0.825rem;">Clean Code: Handbook of Agile</strong>
+              <span style="font-size:0.725rem; color:var(--text-dim);">Jatuh Tempo: 7 Hari Lagi</span>
+            </div>
+            <div class="preview-ui-box">
+              <span style="font-size:0.7rem; color:var(--text-dim); text-transform:uppercase; font-weight:700;">Katalog Tersedia</span>
+              <strong style="color:#fff; font-size:0.825rem;">Mastering Laravel 10</strong>
+              <span style="font-size:0.725rem; color:#34d399;">Stok: 5 Eksemplar</span>
+            </div>
+            <div class="preview-ui-box">
+              <span style="font-size:0.7rem; color:var(--text-dim); text-transform:uppercase; font-weight:700;">Status Kuota Pinjam</span>
+              <strong style="color:#fff; font-size:0.825rem;">1 dari Maks. 3 Buku</strong>
+              <span style="font-size:0.725rem; color:var(--text-dim);">Sirkulasi Tertib</span>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:0.6rem 0.9rem; background:rgba(0,0,0,0.3); border-radius:8px; font-size:0.825rem;">
+            <span><i class="fa-solid fa-user-graduate"></i> Siswa: <strong>Alvin Chandra</strong> (XII PPLG)</span>
+            <span style="color:#a855f7; font-weight:700;">Role Guard: Siswa (Anggota)</span>
+          </div>
+        </div>
+      </div>
+    `,
     architecture: [
       "Standarisasi 8 Unit Kompetensi SKKNI Pemrogram Junior (Junior Coder FR.IA.02) dengan pola Model-View-Controller.",
       "Dual-Role Authentication: Pemisahan alur kerja dan hak akses antara Administrator (Petugas) dan Siswa (Anggota).",
@@ -255,10 +413,9 @@ const projectData = {
       url: "./perpustakaan-sekolah-digital/public/",
       demoType: "login",
       items: [
-        { label: "URL Aplikasi (Login Tab)", value: "./perpustakaan-sekolah-digital/public/login" },
+        { label: "Repositori GitHub Resmi", value: "github.com/Alvin-Chandra1/perpustakaan-sekolah-digital" },
         { label: "Akun Administrator", value: "Username: admin | Password: admin123" },
-        { label: "Akun Siswa Anggota", value: "Username: ahmad / siti / budi | Password: password123" },
-        { label: "Registrasi Siswa Baru", value: "Tersedia fitur 'Daftar Anggota' mandiri di halaman login." }
+        { label: "Akun Siswa Anggota", value: "Username: ahmad / siti / budi | Password: password123" }
       ]
     },
     techStack: ["Laravel 10", "PHP 8.1+", "MySQL 8.0", "Eloquent ORM", "Bootstrap 5.3", "FontAwesome 6", "Unit Testing Ready"]
@@ -275,9 +432,8 @@ function initProjectModals() {
   const modalArchList = document.getElementById('modal-arch-list');
   const modalCreds = document.getElementById('modal-creds');
   const modalTechTags = document.getElementById('modal-tech-tags');
+  const modalUiPreview = document.getElementById('modal-ui-preview');
   const modalActionsWrap = document.getElementById('modal-actions-wrap');
-
-  const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 
   const openModalByKey = (projectKey) => {
     const data = projectData[projectKey];
@@ -285,6 +441,11 @@ function initProjectModals() {
       modalTitle.textContent = data.title;
       modalCategory.textContent = data.category;
       modalSummary.textContent = data.summary;
+
+      // Render realistic UI Preview
+      if (modalUiPreview) {
+        modalUiPreview.innerHTML = data.uiPreviewHTML || '';
+      }
 
       // Arch list
       modalArchList.innerHTML = data.architecture.map(item => `
@@ -294,8 +455,8 @@ function initProjectModals() {
         </li>
       `).join('');
 
-      // Credentials & Hosting notice
-      let credsHTML = `
+      // Credentials & GitHub link
+      modalCreds.innerHTML = `
         <div style="font-weight: 700; color: var(--text-main); margin-bottom: 0.4rem;">
           <i class="fa-solid fa-key" style="color: var(--accent-amber);"></i> Akses & Informasi Akun Demo:
         </div>
@@ -305,34 +466,24 @@ function initProjectModals() {
             <strong style="color: var(--accent-cyan); margin-left: 0.35rem;">${item.value}</strong>
           </div>
         `).join('')}
-      `;
-
-      if (!isLocal) {
-        credsHTML += `
-          <div class="backend-notice-box" style="margin-top: 0.85rem;">
-            <i class="fa-solid fa-server" style="color: var(--accent-amber); font-size: 1.15rem; margin-top: 0.2rem;"></i>
-            <div>
-              <strong>Informasi Backend & Database:</strong> Projek ini merupakan aplikasi Full-Stack dinamis berbasis backend PHP & database MySQL. Di hosting statis seperti GitHub Pages, aplikasi tidak dapat mengeksekusi PHP secara langsung, namun seluruh arsitektur, kode program lengkap, file database <code>.sql</code>, dan panduan instalasi dapat diakses secara transparan melalui tombol repositori GitHub di bawah ini.
-            </div>
+        <div class="backend-notice-box" style="margin-top: 0.85rem;">
+          <i class="fa-brands fa-github" style="color: var(--accent-cyan); font-size: 1.25rem; margin-top: 0.15rem;"></i>
+          <div>
+            <strong>Akses Kode Sumber & Database di GitHub:</strong> Seluruh kode program, arsitektur MVC/Laravel, skema database <code>.sql</code>, dan dokumentasi instalasi projek ini tersedia secara terbuka dan dapat ditinjau langsung melalui repositori GitHub resmi kami di bawah ini.
           </div>
-        `;
-      }
-
-      modalCreds.innerHTML = credsHTML;
+        </div>
+      `;
 
       // Tech stack tags
       modalTechTags.innerHTML = data.techStack.map(tag => `
         <span class="tech-tag" style="background: rgba(56, 189, 248, 0.1); color: var(--accent-cyan); border-color: rgba(56, 189, 248, 0.25);">${tag}</span>
       `).join('');
 
-      // Action buttons
+      // Action buttons - Direct to GitHub
       if (modalActionsWrap) {
         modalActionsWrap.innerHTML = `
-          <a href="${data.githubRepo}" target="_blank" class="btn btn-primary" style="flex: 1.2;">
-            <i class="fa-brands fa-github"></i> Buka Source Code di GitHub
-          </a>
-          <a href="${data.credentials.url}" target="_blank" class="btn btn-outline" style="flex: 1;" title="${isLocal ? 'Buka di Server Lokal Laragon' : 'Membutuhkan server lokal Laragon / PHP aktif'}">
-            <i class="fa-solid ${isLocal ? 'fa-play' : 'fa-laptop-code'}"></i> ${isLocal ? 'Buka di Localhost' : 'Buka di Server Lokal'}
+          <a href="${data.githubRepo}" target="_blank" class="btn btn-primary" style="flex: 1; justify-content: center; padding: 0.85rem 1.5rem; font-size: 1rem;">
+            <i class="fa-brands fa-github" style="font-size: 1.15rem;"></i> Buka Repositori Kode Sumber di GitHub
           </a>
         `;
       }
@@ -341,32 +492,6 @@ function initProjectModals() {
       document.body.style.overflow = 'hidden';
     }
   };
-
-  // Intercept launcher pills if on remote web
-  document.querySelectorAll('.launcher-pill').forEach(pill => {
-    pill.addEventListener('click', (e) => {
-      if (!isLocal) {
-        e.preventDefault();
-        const projectKey = pill.getAttribute('data-open-modal');
-        if (projectKey) {
-          openModalByKey(projectKey);
-        }
-      }
-    });
-  });
-
-  // Intercept local-app-btn if on remote web
-  document.querySelectorAll('.local-app-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      if (!isLocal) {
-        e.preventDefault();
-        showToast('Aplikasi ini membutuhkan server lokal Laragon / PHP & MySQL aktif.');
-        const card = btn.closest('.project-card');
-        const modalBtn = card?.querySelector('[data-open-modal]');
-        if (modalBtn) modalBtn.click();
-      }
-    });
-  });
 
   document.querySelectorAll('[data-open-modal]').forEach(btn => {
     btn.addEventListener('click', (e) => {

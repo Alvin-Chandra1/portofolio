@@ -1973,6 +1973,75 @@ textarea.form-control {
   color: #ffffff;
 }
 
+/* UI Preview Window in Project Modal */
+.preview-window {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+.preview-window-bar {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.6rem 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.preview-window-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.preview-window-url {
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  color: var(--text-dim);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3px 12px;
+  border-radius: var(--radius-sm);
+  flex: 1;
+}
+
+.preview-window-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.preview-ui-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.preview-ui-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.preview-ui-box {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.preview-ui-box.highlight {
+  border-color: var(--accent-cyan);
+  background: rgba(56, 189, 248, 0.08);
+}
+
 /* CV Modal Specifics */
 .cv-modal-container {
   max-width: 900px;
