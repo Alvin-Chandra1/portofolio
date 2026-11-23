@@ -482,7 +482,7 @@ function initProjectModals() {
       if (modalActionsWrap) {
         modalActionsWrap.innerHTML = `
           <a href="${data.previewUrl}" target="_blank" class="btn btn-primary" style="flex: 1; justify-content: center; padding: 0.85rem 1.25rem; font-size: 0.95rem;">
-            <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 1rem;"></i> Buka Tampilan Asli Projek
+            <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 1rem;"></i> Preview Tampilan Web
           </a>
           <a href="${data.githubRepo}" target="_blank" class="btn btn-outline btn-github" style="flex: 1; justify-content: center; padding: 0.85rem 1.25rem; font-size: 0.95rem;">
             <i class="fa-brands fa-github" style="font-size: 1.15rem;"></i> Repositori GitHub

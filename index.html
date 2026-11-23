@@ -408,8 +408,8 @@
                         </div>
 
                         <div class="project-actions">
-                            <a href="previews/swoosh/index.html" target="_blank" class="btn btn-primary btn-sm" title="Buka Halaman Web Asli Swoosh">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Pratinjau Web Asli
+                            <a href="previews/swoosh/index.html" target="_blank" class="btn btn-primary btn-sm" title="Preview Tampilan Web Swoosh">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview Tampilan Web
                             </a>
                             <button type="button" class="btn btn-outline btn-sm" data-open-modal="swoosh">
                                 <i class="fa-solid fa-circle-info"></i> Detail Projek
@@ -488,8 +488,8 @@
                         </div>
 
                         <div class="project-actions">
-                            <a href="previews/ruangbaca/index.html" target="_blank" class="btn btn-primary btn-sm" title="Buka Halaman Web Asli RuangBaca">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Pratinjau Web Asli
+                            <a href="previews/ruangbaca/index.html" target="_blank" class="btn btn-primary btn-sm" title="Preview Tampilan Web RuangBaca">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview Tampilan Web
                             </a>
                             <button type="button" class="btn btn-outline btn-sm" data-open-modal="ruangbaca">
                                 <i class="fa-solid fa-circle-info"></i> Detail Projek
@@ -568,8 +568,8 @@
                         </div>
 
                         <div class="project-actions">
-                            <a href="previews/suara-sekolah/index.html" target="_blank" class="btn btn-primary btn-sm" title="Buka Halaman Web Asli SuaraSekolah">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Pratinjau Web Asli
+                            <a href="previews/suara-sekolah/index.html" target="_blank" class="btn btn-primary btn-sm" title="Preview Tampilan Web SuaraSekolah">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview Tampilan Web
                             </a>
                             <button type="button" class="btn btn-outline btn-sm" data-open-modal="pengaduan_sekolah">
                                 <i class="fa-solid fa-circle-info"></i> Detail Projek
@@ -648,8 +648,8 @@
                         </div>
 
                         <div class="project-actions">
-                            <a href="previews/perpustakaan/index.html" target="_blank" class="btn btn-primary btn-sm" title="Buka Halaman Web Asli Perpustakaan Digital">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Pratinjau Web Asli
+                            <a href="previews/perpustakaan/index.html" target="_blank" class="btn btn-primary btn-sm" title="Preview Tampilan Web Perpustakaan Digital">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview Tampilan Web
                             </a>
                             <button type="button" class="btn btn-outline btn-sm" data-open-modal="perpustakaan_digital">
                                 <i class="fa-solid fa-circle-info"></i> Detail Projek
