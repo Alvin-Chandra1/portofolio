@@ -78,16 +78,42 @@
     </style>
 </head>
 <body>
-    <div class="preview-topbar" style="background:#0f172a; color:#fff; padding:10px 18px; font-size:13px; display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #f59e0b; flex-wrap:wrap; gap:10px; position:sticky; top:0; z-index:9999;">
-        <div style="display:flex; align-items:center; gap:10px;">
-            <span style="background:#f59e0b; color:#000; padding:2px 8px; border-radius:4px; font-weight:800; font-size:11px; letter-spacing:0.5px;">PERHATIAN</span>
-            <span>Halaman ini <strong>hanya pratinjau tampilan antarmuka (UI Preview)</strong>. Untuk mengakses fitur & database secara penuh, silakan <strong>unduh melalui GitHub</strong>.</span>
+    <!-- PREVIEW WARNING POPUP MODAL (DIRECT ON PAGE) -->
+    <div id="preview-alert-modal" style="position: fixed; inset: 0; background: rgba(0, 0, 0, 0.78); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 999999; display: flex; align-items: center; justify-content: center; padding: 1.25rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+        <div style="background: #ffffff; color: #1e293b; max-width: 540px; width: 100%; border-radius: 16px; padding: 2rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4); border: 2px solid #f59e0b; text-align: center;">
+            <div style="width: 60px; height: 60px; margin: 0 auto 1.25rem; background: #fef3c7; border: 2px solid #fde68a; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px;">
+                ⚠️
+            </div>
+            <span style="background: #fef3c7; color: #b45309; font-weight: 800; font-size: 12px; letter-spacing: 0.8px; padding: 4px 12px; border-radius: 20px; text-transform: uppercase;">Pemberitahuan Penting</span>
+            <h2 style="font-size: 1.4rem; font-weight: 800; color: #0f172a; margin: 0.75rem 0 0.5rem; line-height: 1.3;">Website Ini Hanya Pratinjau Tampilan</h2>
+            <p style="font-size: 0.95rem; color: #475569; line-height: 1.6; margin: 0 0 1.5rem;">
+                Halaman ini <strong>hanya berupa pratinjau tampilan antarmuka (UI Preview)</strong>. Untuk mengakses dan menjalankan website secara <strong>penuh (Full Stack beserta database MySQL &amp; login)</strong>, seluruh kode sumber <strong>harus diunduh melalui GitHub</strong>.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <a href="https://github.com/Alvin-Chandra1/pengaduan-sekolah" target="_blank" style="background: #0f172a; color: #ffffff; padding: 0.85rem 1.25rem; border-radius: 10px; font-weight: 700; font-size: 0.95rem; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);">
+                    <svg height="18" width="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                    Buka &amp; Unduh Full Website di GitHub ↗
+                </a>
+                <button type="button" onclick="document.getElementById('preview-alert-modal').remove()" style="background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; padding: 0.85rem 1.25rem; border-radius: 10px; font-weight: 700; font-size: 0.95rem; cursor: pointer;">
+                    Saya Mengerti, Lanjutkan Lihat Tampilan
+                </button>
+            </div>
         </div>
-        <div style="display:flex; gap:12px; align-items:center;">
-            <a href="https://github.com/Alvin-Chandra1/pengaduan-sekolah" target="_blank" style="background:#24292f; color:#fff; padding:5px 12px; border-radius:6px; border:1px solid #444; font-size:12px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
+    </div>
+
+    <!-- PROMINENT STICKY TOPBAR -->
+    <div style="background: #fffbeb; color: #78350f; border-bottom: 2px solid #f59e0b; padding: 12px 20px; font-size: 13.5px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; position: sticky; top: 0; z-index: 99998; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="background: #f59e0b; color: #ffffff; padding: 3px 8px; border-radius: 4px; font-weight: 800; font-size: 11px; letter-spacing: 0.5px;">PERHATIAN</span>
+            <span style="font-weight: 600; color: #92400e;">Halaman ini HANYA tampilan (UI Preview). Untuk mengakses website secara FULL, silakan unduh melalui GitHub.</span>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+            <a href="https://github.com/Alvin-Chandra1/pengaduan-sekolah" target="_blank" style="background: #0f172a; color: #ffffff; padding: 6px 14px; border-radius: 6px; font-weight: 700; font-size: 12.5px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
                 Unduh di GitHub ↗
             </a>
-            <a href="../../index.html#portofolio" style="color:#94a3b8; text-decoration:none; font-size:12px;">← Kembali ke Portofolio</a>
+            <a href="../../index.html#portofolio" style="background: #ffffff; color: #475569; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 6px; font-weight: 600; font-size: 12.5px; text-decoration: none;">
+                ← Kembali ke Portofolio
+            </a>
         </div>
     </div>
 
